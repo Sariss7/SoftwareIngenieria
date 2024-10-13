@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Quiz</h1>
+        <p>I UNIDAD</p>
+    </header>
+    <div class="pregunta">
+        <section id="p0">
+            <h3>1.- ¿Cuál es el concepto de Ingeniería?</h3>
+            <label>
+                <input type="radio" value="1" name="p0" onclick="respuesta(0,this)"> Aplicación de conocimientos científicos y matemáticos para la invención, mejora y resolución de problemas técnicos
+            </label>
+            <label>
+                <input type="radio" value="2" name="p0" onclick="respuesta(0,this)"> Proceso de manufactura de software
+            </label>
+            <label>
+                <input type="radio" value="3" name="p0" onclick="respuesta(0,this)"> Uso de dispositivos electrónicos
+            </label>
+        </section>
+        <section id="p1">
+            <h3>2.- ¿Cuál es el concepto de Software?</h3>
+            <label>
+                <input type="radio" value="1" name="p1" onclick="respuesta(1,this)"> Componentes físicos de un sistema informático
+            </label>
+            <label>
+                <input type="radio" value="2" name="p1" onclick="respuesta(1,this)"> Conjunto de programas y aplicaciones que permiten el funcionamiento de un sistema informático
+            </label>
+            <label>
+                <input type="radio" value="3" name="p1" onclick="respuesta(1,this)"> Equipos necesarios para procesar información
+            </label>
+        </section>
+        <section id="p2">
+            <h3>3.- ¿Cuál es el concepto de Hardware?</h3>
+            <label>
+                <input type="radio" value="1" name="p2" onclick="respuesta(2,this)"> Conjunto de aplicaciones y programas
+            </label>
+            <label>
+                <input type="radio" value="2" name="p2" onclick="respuesta(2,this)"> Componentes físicos de un sistema informático
+            </label>
+            <label>
+                <input type="radio" value="3" name="p2" onclick="respuesta(2,this)"> Código fuente de un programa
+            </label>
+        </section>
+        <section id="p3">
+            <h3>4.- ¿Cuál es el concepto de Dato?</h3>
+            <label>
+                <input type="radio" value="1" name="p3" onclick="respuesta(3,this)"> Representación simbólica de una variable que puede ser cuantitativa o cualitativa
+            </label>
+            <label>
+                <input type="radio" value="2" name="p3" onclick="respuesta(3,this)"> Información procesada y útil
+            </label>
+            <label>
+                <input type="radio" value="3" name="p3" onclick="respuesta(3,this)"> Conjunto de programas de computación
+            </label>
+        </section>
+        <section id="p4">
+            <h3>5.- ¿Cuál es el concepto de Información?</h3>
+            <label>
+                <input type="radio" value="1" name="p4" onclick="respuesta(4,this)"> Representación simbólica de una variable
+            </label>
+            <label>
+                <input type="radio" value="2" name="p4" onclick="respuesta(4,this)"> Conjunto de datos procesados que tienen un significado y contexto
+            </label>
+            <label>
+                <input type="radio" value="3" name="p4" onclick="respuesta(4,this)"> Dispositivo que almacena datos
+            </label>
+        </section>
+        <button onclick="terminar()">Terminar</button>
+        <button onclick="reintentar()">Reintentar</button>
+        <button onclick="regresar()">Regresar</button>
+        <h2>Cantidad de aciertos: <span id="resultado"></span></h2>
+        <h2>Tu calificacion es <span id="terminar"></span></h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

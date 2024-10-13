@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%; 
+}
+
+body {
+    background-color: rgb(8, 8, 8);
+}
+
+header {
+    background-image: url(fondo.jpg);
+}
+
+h1 { 
+    padding: auto;
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 50px;
+}
+
+.menulat a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-family: monospace;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.menulat a:hover {
+    border-bottom: 2px solid violet;
+}
+
+.menulat {
+    position: absolute;
+    background: rgba(50, 46, 46, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 400ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#boton:checked ~ .menulat {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menulat .temas {
+    font-size: 20px;
+    width: 100%;
+    max-width: 250px;
+    background: black;
+    height: 100%;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#boton:checked ~ .menulat .temas {
+    transform: translateX(0%);
+}
+
+.menulat nav {
+    transform: translateY(15%);
+}
+
+.menulat nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+.menulat nav a:hover {
+    border-left: 5px solid rgb(127, 127, 223);
+    background: rgb(167, 37, 238);
+}
+
+.menulat label {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.menulat h2 {
+    font-family: monospace;
+    color: white;
+    font-size: 20px;
+    padding-top: 15px; 
+    padding-left: 15px;
+}
+
+.boton label {
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+    padding-left: 15px;
+}
+
+input {
+    visibility: hidden;
+}
+
+.texto{ 
+    margin: auto;
+    justify-content: center;
+    height: auto;
+    width: 60%;
+    text-align: justify;
+    border-radius: 11px;
+    align-items: center;
+}
+
+.texto p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.crucigrama {
+    padding-left: 470px;
+}
+
+.crucigrama iframe {
+    position: absolute;
+    background-color: white;
+}
+
+.tabla ul {
+    padding-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+}
+
+.tabla img {
+    height: 250px;
+    width: 250px;
+    border-radius: 360px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tabla img:hover {
+    transform: scale(1.1);
+}
+
+.tabla a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.menu ul li {
+    display: flex;
+    position: relative;
+}
+
+.menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    background-color: #d208d2;
+}
+
+
+.desplegable:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #d208d2;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    width: 250px;
+}
+
+.submenu li {
+    display: block;
+}
+
+.submenu li a {
+    background-color: black;
+    border: 1px solid black;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.submenu li a:hover {
+    background-color: black;
+}
